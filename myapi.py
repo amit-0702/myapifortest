@@ -8,7 +8,7 @@ def index():
 
 
 response = [
-    {'is_seccess': 'true',
+    {'is_success': '',
      'user_id': 'amit_kumar_07022002',
      'count': 0,
      'email': '1905559@kiit.ac.in',
@@ -19,14 +19,9 @@ response = [
 ]
 
 
-@app.route('/challenge', methods=['GET'])
-def get():
+@app.route('/challenge', methods=['GET', 'POST'])
+def get_response():
     return jsonify({'Response': response})
-
-
-@app.route('/challenge/')
-def post():
-
 
 
 if __name__ == "__main__":
